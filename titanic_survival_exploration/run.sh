@@ -9,8 +9,8 @@ conda create -n titanic_env --file conda_req.txt
 
 source activate titanic_env
 
-# Execute and replace notebook
-jupyter nbconvert --execute --to notebook --inplace titanic_survival_exploration.ipynb
+# Execute and replace notebook (allowing errors in execution)
+jupyter nbconvert --execute --allow-errors --to notebook --inplace  titanic_survival_exploration.ipynb
 
 # Export as a HTML with the name 'report.html'
 jupyter nbconvert --to html titanic_survival_exploration.ipynb --output report
